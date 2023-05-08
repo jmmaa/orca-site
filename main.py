@@ -102,45 +102,35 @@ def main():
 
     with col1:
         st.write(
-            f"""
-            Mean Water Level from `{starting_date}` to 
-            `{starting_date + timedelta(span)}` measured in centimeters (cm)
-            """
+            f"### Mean Water Level from {starting_date} to \
+            {starting_date + timedelta(span)} measured in centimeters (cm)"
         )
         st.line_chart(preds["mean water level"])
         st.divider()
 
         st.write(
-            f"""
-            Mean Sea Level Pressure from `{starting_date}` to 
-            `{starting_date + timedelta(span)}` measured in millibars (mbar)
-            """
+            f"### Mean Sea Level Pressure from {starting_date} to \
+            {starting_date + timedelta(span)} measured in millibars (mbar)"
         )
         st.line_chart(preds["mean sea level pressure"])
 
         st.divider()
         st.write(
-            f"""
-            Mean Wind Speed from `{starting_date}` to 
-            `{starting_date + timedelta(span)}` measured in meters per second
-            """
+            f"### Mean Wind Speed from {starting_date} to \
+            {starting_date + timedelta(span)} measured in meters per second (mps)"
         )
         st.line_chart(preds["mean wind speed"])
 
     with col2:
         st.write(
-            f"""
-        Temperature from `{starting_date}` to 
-            `{starting_date + timedelta(span)}` measured in degrees celsius
-            """
+            f"### Temperature from {starting_date} to \
+            {starting_date + timedelta(span)} measured in degrees celsius"
         )
         st.line_chart(preds[["max temperature", "min temperature", "mean temperature"]])
         st.divider()
         st.write(
-            f"""
-            Mean Relative Humidity from `{starting_date}` to 
-            `{starting_date + timedelta(span)}` measured in percent
-            """
+            f"### Mean Relative Humidity from {starting_date} to \
+            {starting_date + timedelta(span)} measured in percentage (%)"
         )
         st.line_chart(preds["mean relative humidity"])
 
